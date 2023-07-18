@@ -9,12 +9,13 @@ def game():
     while count > 0:  # This game runs 10 times
         try:
             global player_score
+            global computer_score
             player_score = 0
             computer_number = random.randint(1, 10)  # Random number between 1 and 10
             player_number = int(input("Please choose a random number: "))
             if player_number != computer_number:
                 print("Computer wins...", computer_number)
-                global computer_score += 1
+                computer_score += 1
                 count -= 1
             else:
                 print("You win!", computer_number)
